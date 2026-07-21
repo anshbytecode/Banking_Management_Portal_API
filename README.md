@@ -28,5 +28,4 @@ A secure RESTful Banking Management Portal built with **Spring Boot** and **Spri
 - Pagination
 - Bank statement generation
 
-## License
-This project is licensed under the MIT License.
+
