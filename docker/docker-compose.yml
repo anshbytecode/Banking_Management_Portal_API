@@ -6,9 +6,12 @@ services:
     container_name: bankingportal-mysql
     restart: unless-stopped
     environment:
+    
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: bankingapp
+      
       MYSQL_USER: bankinguser
+      
       MYSQL_PASSWORD: bankingpass
     ports:
       - "3306:3306"
@@ -21,13 +24,16 @@ services:
 
   redis:
     image: redis:7-alpine
+    
     container_name: bankingportal-redis
     restart: unless-stopped
+    
     ports:
       - "6379:6379"
     volumes:
       - ./redis/data:/data
     command: redis-server --appendonly yes
+    
     networks:
       - banking-network
 
