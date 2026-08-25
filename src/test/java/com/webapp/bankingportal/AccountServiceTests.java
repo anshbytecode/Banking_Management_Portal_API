@@ -57,6 +57,7 @@ public class AccountServiceTests extends BaseTest {
     @Test
     public void test_create_pin_with_invalid_account_number() {
         Assertions.assertThrows(NotFoundException.class, () -> {
+            
             accountService.createPin(getRandomAccountNumber(), getRandomPassword(), getRandomPin());
         });
     }
@@ -67,6 +68,7 @@ public class AccountServiceTests extends BaseTest {
                 .get("accountNumber");
 
         Assertions.assertThrows(UnauthorizedException.class, () -> {
+            
             accountService.createPin(accountNumber, getRandomPassword(), getRandomPin());
         });
     }
@@ -76,6 +78,7 @@ public class AccountServiceTests extends BaseTest {
         val accountDetails = createAccountWithPin(passwordEncoder, userRepository, accountService);
 
         Assertions.assertThrows(UnauthorizedException.class, () -> {
+            
             accountService.createPin(accountDetails.get("accountNumber"), accountDetails.get("password"),
                     getRandomPin());
         });
