@@ -35,6 +35,8 @@ public class AccountServiceTests extends BaseTest {
 
     @Test
     public void test_create_account_with_null_user() {
+
+        
         Assertions.assertThrows(ConstraintViolationException.class, () -> accountService.createAccount(null));
     }
 
