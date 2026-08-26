@@ -35,8 +35,6 @@ public class AccountServiceTests extends BaseTest {
 
     @Test
     public void test_create_account_with_null_user() {
-
-        
         Assertions.assertThrows(ConstraintViolationException.class, () -> accountService.createAccount(null));
     }
 
@@ -106,21 +104,17 @@ public class AccountServiceTests extends BaseTest {
     public void test_create_pin_with_invalid_format() {
         
         val accountDetails = createAccount();
-
-        // Short pin
         Assertions.assertThrows(InvalidPinException.class, () -> {
             accountService.createPin(accountDetails.get("accountNumber"), accountDetails.get("password"),
                     faker.number().digits(3));
         });
 
-        // Long pin
         Assertions.assertThrows(InvalidPinException.class, () -> {
             
             accountService.createPin(accountDetails.get("accountNumber"), accountDetails.get("password"),
                     faker.number().digits(5));
         });
 
-        // Invalid format
         Assertions.assertThrows(InvalidPinException.class, () -> {
             accountService.createPin(accountDetails.get("accountNumber"), accountDetails.get("password"),
                     getRandomPassword().substring(0, 4));
