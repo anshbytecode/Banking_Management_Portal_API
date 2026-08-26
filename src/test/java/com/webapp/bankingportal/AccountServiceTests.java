@@ -58,6 +58,7 @@ public class AccountServiceTests extends BaseTest {
     public void test_create_pin_with_invalid_account_number() {
         Assertions.assertThrows(NotFoundException.class, () -> {
             
+            
             accountService.createPin(getRandomAccountNumber(), getRandomPassword(), getRandomPin());
         });
     }
@@ -69,6 +70,7 @@ public class AccountServiceTests extends BaseTest {
 
         Assertions.assertThrows(UnauthorizedException.class, () -> {
             
+            
             accountService.createPin(accountNumber, getRandomPassword(), getRandomPin());
         });
     }
@@ -78,6 +80,7 @@ public class AccountServiceTests extends BaseTest {
         val accountDetails = createAccountWithPin(passwordEncoder, userRepository, accountService);
 
         Assertions.assertThrows(UnauthorizedException.class, () -> {
+            
             
             accountService.createPin(accountDetails.get("accountNumber"), accountDetails.get("password"),
                     getRandomPin());
@@ -90,6 +93,7 @@ public class AccountServiceTests extends BaseTest {
         val accountDetails = createAccount();
 
         Assertions.assertThrows(InvalidPinException.class, () -> {
+            
             accountService.createPin(accountDetails.get("accountNumber"), accountDetails.get("password"), null);
         });
 
@@ -100,6 +104,7 @@ public class AccountServiceTests extends BaseTest {
 
     @Test
     public void test_create_pin_with_invalid_format() {
+        
         val accountDetails = createAccount();
 
         // Short pin
@@ -110,6 +115,7 @@ public class AccountServiceTests extends BaseTest {
 
         // Long pin
         Assertions.assertThrows(InvalidPinException.class, () -> {
+            
             accountService.createPin(accountDetails.get("accountNumber"), accountDetails.get("password"),
                     faker.number().digits(5));
         });
