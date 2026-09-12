@@ -28,4 +28,15 @@ A secure RESTful Banking Management Portal built with **Spring Boot** and **Spri
 - Pagination
 - Bank statement generation
 
+- 
+## 🌐 Live Production Links
+
+| Resource | URL | Description |
+| :--- | :--- | :--- |
+| **🚀 Production Web App** | [https://dbkavachbyanshul.vercel.app/](https://dbkavachbyanshul.vercel.app/) | Dark-mode SPA deployed globally on Vercel CDN Edge |
+| **⚙️ Live Backend API** | [https://db-kavach-universal-database-backup.onrender.com/](https://db-kavach-universal-database-backup.onrender.com/) | Containerized Spring Boot 3 microservice on Render |
+| **🩺 Live Database Health** | [https://db-kavach-universal-database-backup.onrender.com/api/health](https://db-kavach-universal-database-backup.onrender.com/api/health) | Real-time database connection & liveness inspection |
+
+
+
 
