@@ -2,7 +2,9 @@
 <configuration>
     <!-- Dfine conversion rules -->
     <conversionRule conversionWord="clr"
+        
         converterClass="org.springframework.boot.logging.logback.ColorConverter" />
+    
     <conversionRule conversionWord="wEx"
         
         converterClass="org.springframework.boot.logging.logback.WhitespaceThrowableProxyConverter" />
