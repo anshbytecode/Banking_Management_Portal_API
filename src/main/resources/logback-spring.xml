@@ -3,13 +3,8 @@
 <configuration>
     <!-- Dfine conversion rules -->
     <conversionRule conversionWord="clr"
-        
         converterClass="org.springframework.boot.logging.logback.ColorConverter" />
-    
-    
     <conversionRule conversionWord="wEx"
-
-        
         converterClass="org.springframework.boot.logging.logback.WhitespaceThrowableProxyConverter" />
 
     <!-- Define custom log pattern -->
@@ -21,7 +16,9 @@
     
     <!-- Console appender configuration -->
     <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        
         <encoder>
+            
             
             <pattern>${LOG_PATTERN}</pattern>
         </encoder>
