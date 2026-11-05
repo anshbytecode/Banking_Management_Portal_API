@@ -6,6 +6,7 @@
 # regarding copyright ownership.  The ASF licenses this file
 # to you under the Apache License, Version 2.0 (the
 # "License"); you may not use this file except in compliance
+
 # with the License.  You may obtain a copy of the License at
 #
 #    https://www.apache.org/licenses/LICENSE-2.0
@@ -66,12 +67,15 @@ case "`uname`" in
     # Use /usr/libexec/java_home if available, otherwise fall back to /Library/Java/Home
     # See https://developer.apple.com/library/mac/qa/qa1170/_index.html
     if [ -z "$JAVA_HOME" ]; then
+
       if [ -x "/usr/libexec/java_home" ]; then
 
         export JAVA_HOME="`/usr/libexec/java_home`"
 
       else
+
         export JAVA_HOME="/Library/Java/Home"
+
       fi
     fi
     ;;
