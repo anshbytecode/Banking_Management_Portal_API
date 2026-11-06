@@ -1,6 +1,7 @@
 {
 	"info": {
 		"_postman_id": "2c745177-6ae9-474e-9034-54d8904c5a12",
+		
 		"name": "Banking Portal",
 		
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
