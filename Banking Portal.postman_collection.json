@@ -35,14 +35,17 @@
 						"header": [
 							{
 								"key": "Authorization",
+								
 								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIyMzY0ODAiLCJleHAiOjE2OTAxMjY3OTksImlhdCI6MTY5MDEwODc5OX0.PZ5rIbZ9aa3fXoSXOObSJ3BD-AX3KT3CsCTU7WztAWwV77-tmiu94vLKyDC9nd6nTXsI4TWWCO1resfZY8INzg",
 								"type": "default"
 							}
 						],
 						"body": {
+							
 							"mode": "raw",
 							"raw": "{\r\n    \"pin\":\"12345\",\r\n    \"password\":\"secretpassword\"\r\n}",
 							"options": {
+								
 								"raw": {
 									"language": "json"
 								}
