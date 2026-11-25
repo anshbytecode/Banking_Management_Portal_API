@@ -33,6 +33,7 @@
     </properties>
     
     <dependencies>
+        
         <dependency>
             <groupId>org.projectlombok</groupId>
             
@@ -42,6 +43,7 @@
         </dependency>
         
         <dependency>
+            
             <groupId>com.icegreen</groupId>
             
             <artifactId>greenmail-junit5</artifactId>
