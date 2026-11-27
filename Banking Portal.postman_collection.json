@@ -110,10 +110,12 @@
 				{
 					"name": "update pin",
 					"request": {
+						
 						"method": "POST",
 						"header": [
 							{
 								"key": "Authorization",
+								
 								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI1NTY3MDQiLCJleHAiOjE2OTAxMjE5MTQsImlhdCI6MTY5MDEwMzkxNH0.rX5c-yPdOM1aWHSkb6DhxjuqEzy3MHRwD5Ijg0xYcVj2Fr6O20VkcoN_gpi1-_CUFwlUcFkl03KWhSCxAoKG9A",
 								"type": "default"
 							}
